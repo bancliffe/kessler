@@ -64,14 +64,14 @@ function update_combat_chooseAction()
 end
 
 function update_combat_executeAction()
-    -- character table, actor,target
-    characters[selectedchar].skills[selectedAction].onAction(characters,selectedchar,targetchar)
-    selectedchar+=1
-    if selectedchar>#characters then
-      endOfRound()
-    end
-    targetchar=-1
-    _update=update_combat_chooseAction
+  -- character table, actor,target
+  characters[selectedchar].skills[selectedAction].onAction(characters,selectedchar,targetchar)
+  selectedchar+=1
+  if selectedchar>#characters then
+    endOfRound()
+  end
+  targetchar=-1
+  _update=update_combat_chooseAction
 end
 
 function draw_combat()

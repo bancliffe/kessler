@@ -2,8 +2,8 @@
 function enum(tbl)
   local length = #tbl
   for i = 1, length do
-      local v = tbl[i]
-      tbl[v] = i
+		local v = tbl[i]
+		tbl[v] = i
   end
   return tbl
 end
@@ -22,16 +22,16 @@ function glitch(lines)
 		row2=flr(rnd(127))
 		if (row2>=row) row2+=1
 		
-		// copy a row from the
-		// screen into temp memory
+		-- copy a row from the
+		-- screen into temp memory
 		memcpy(0x4300, 0x6000+64*row, 64)
 		
-		//copy another row from the
-		// screen to our original row
+		--copy another row from the
+		-- screen to our original row
 		memcpy(0x6000+64*row, 0x6000+64*row2, 64)
 		       
-		//copy the temp row into row2's
-		//original slot
+		--copy the temp row into row2's
+		--original slot
 		memcpy(0x6000+64*row2, 0x4300,64)
 	end
 end
@@ -121,11 +121,11 @@ end
 
 function sortByInitiative(table)
 	for i=1,#table do
-			local j = i
-			while j > 1 and table[j-1].initiative > table[j].initiative do
-				table[j],table[j-1] = table[j-1],table[j]
-					j = j - 1
-			end
+		local j = i
+		while j > 1 and table[j-1].initiative > table[j].initiative do
+			table[j],table[j-1] = table[j-1],table[j]
+				j = j - 1
+		end
 	end
 	local retval={}
 	for i=#table,1,-1 do
@@ -137,7 +137,7 @@ end
 function pstr(st,...)
 	local str=""
 	for i,p in inext,split(st) do
-			str..=({"",...})[i]..p
+		str..=({"",...})[i]..p
 	end
 	return str
 end

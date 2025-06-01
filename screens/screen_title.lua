@@ -35,9 +35,9 @@ end
 
 function update_title()
   if btnp(❎) then
-      init_menu()
-      _update=update_menu
-      _draw=draw_menu
+    init_menu()
+    _update=update_menu
+    _draw=draw_menu
   end
   for j in all(junk) do
     moveJunk(j,false)
@@ -46,7 +46,6 @@ end
 
 function draw_title()
   cls(0)
-  
   for star in all(stars) do
     pset(star.x,star.y,star.c)
   end
