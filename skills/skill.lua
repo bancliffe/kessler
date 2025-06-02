@@ -7,7 +7,7 @@ general_attack=skill:new({
   sprx=0,
   spry=32,
   isFriendly=false,
-  effect="%TO_HIT_CHANCE% TO DO\n%DMG_RANGE% DAMAGE",
+  effect="%TO_HIT_CHANCE% \f5CHANCE TO DO \f8%DMG_RANGE% \f5DAMAGE",
   targets={true,true,true,true}, 
   onAction=function(characters, actorIndex,targetIndex)
     sfx(0)

@@ -34,7 +34,6 @@ function init_combat()
   targetchar=-1
   _update=update_combat_chooseAction
   _draw=draw_combat
-
   round=1
 
   -- play battle music
@@ -158,9 +157,13 @@ end
 
 function drawSkillDetails()
   print("EFFECT", 2, 106,6)
+
   v1,v2 = "78%","2-5"
-  local s = pstr(", \f5CHANCE TO DO \f8,\f5 DAMAGE",v1,v2)
-  print(s,2,114,10)
+  if selectedAction > 0 then
+    local c = characters[selectedchar]
+    local s = replace(c.skills[selectedAction].effect,"%TO_HIT_CHANCE%", v1,"%DMG_RANGE%",v2)
+    print(s,2,114,10)
+  end
 end
 
 function rollInitiative(characters)

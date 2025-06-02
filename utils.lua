@@ -141,3 +141,17 @@ function pstr(st,...)
 	end
 	return str
 end
+
+function replace(s,f,r,...)
+	local a,i='',1
+	while s[i] do
+		if sub(s,i,i+#f-1)~=f then
+			a..=s[i]
+			i+=1
+		else
+			a..=r or ''
+			i+=#f
+		end
+	end
+	return ... and replace(a,...) or a
+end
