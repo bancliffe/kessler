@@ -69,8 +69,8 @@ end
 
 function genJunk()
   local j={
-    x=earth.x,
-    y=32,
+    x=32+rnd(64),
+    y=32+rnd(64),
     g=(rnd(2))+1,
     r=flr(rnd(2))+1,
     c=7,

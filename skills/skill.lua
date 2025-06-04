@@ -21,7 +21,7 @@ general_shift=skill:new({
   spry=32,
   isFriendly=true,
   targets={true,true,true,true}, 
-  effect="SWAP PLACES WITH FRIENDLY CHARACTER",
+  effect="\f5SWAP PLACES WITH FRIENDLY CHARACTER",
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -35,7 +35,7 @@ general_defend=skill:new({
   spry=32,
   isFriendly=true,
   targets={true,true,true,true},
-  effect="%TO_BLOCK_CHANCE% TO\nBLOCK %DMG_RANGE%", 
+  effect="%TO_BLOCK_CHANCE% \f5TO\nBLOCK \f12%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -49,7 +49,7 @@ scav_bte=skill:new({
   spry=32,
   isFriendly=false,
   targets={false,false,true,true}, 
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -63,7 +63,7 @@ scav_patch=skill:new({
   spry=48,
   isFriendly=true,
   targets={true,true,true,true}, 
-  effect="%TO_HIT_CHANCE% TO HEAL %DMG_RANGE%",
+  effect="%TO_HIT_CHANCE% \f5TO HEAL \f11%DMG_RANGE%",
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -77,7 +77,7 @@ merc_takedown=skill:new({
   spry=32,
   isFriendly=false,
   targets={false,true,true,false},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -91,7 +91,7 @@ merc_grenade=skill:new({
   spry=48,
   isFriendly=false,
   targets={true,true,true,true},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -105,7 +105,7 @@ hacker_fragment=skill:new({
   spry=32,
   isFriendly=false,
   targets={false,true,true,false},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -119,7 +119,7 @@ hacker_move=skill:new({
   spry=48,
   isFriendly=false,
   targets={true,true,true,true},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -133,7 +133,7 @@ chemist_vapour=skill:new({
   spry=32,
   isFriendly=true,
   targets={false,true,true,false},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -147,7 +147,7 @@ chemist_vivisection=skill:new({
   spry=48,
   isFriendly=false,
   targets={true,true,true,true},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -161,7 +161,7 @@ ganger_howl=skill:new({
   spry=32,
   isFriendly=true,
   targets={false,true,true,false},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -175,7 +175,7 @@ ganger_slash=skill:new({
   spry=48,
   isFriendly=false,
   targets={true,true,true,true},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -189,7 +189,7 @@ drone_defend=skill:new({
   spry=32,
   isFriendly=true,
   targets={false,true,true,false},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_BLOCK_CHANCE% \f5TO\nBLOCK \f12%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
@@ -203,7 +203,7 @@ drone_eliminate_threat=skill:new({
   spry=48,
   isFriendly=false,
   targets={true,true,true,true},
-  effect="%TO_HIT_CHANCE% TO DO %DMG_RANGE%", 
+  effect="%TO_HIT_CHANCE% \f5TO DO \f8%DMG_RANGE%", 
   onAction=function(characters)
     for i=1,#characters do 
       -- roll for damage
